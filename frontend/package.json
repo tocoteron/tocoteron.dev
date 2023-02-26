@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "lint:style": "stylelint **/*.scss",
+    "lint:style:fix": "stylelint --fix **/*.scss",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
@@ -25,7 +27,9 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.6.0",
     "prettier": "^2.8.4",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard-scss": "^7.0.1"
   },
   "volta": {
     "node": "18.14.2"
