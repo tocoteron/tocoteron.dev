@@ -9,7 +9,7 @@ interface CareerProps {
 
 export default function Career({ career }: CareerProps) {
   return (
-    <ol>
+    <ol className={styles.career}>
       {career.map(companyJobs => {
         return (
           <li key={companyJobs.company.name} className={styles['company-jobs']}>
