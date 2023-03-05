@@ -1,0 +1,54 @@
+@use '@/styles/mixin.scss';
+
+.job {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.divider {
+  width: 2px;
+  background-color: var(--pencil-color);
+  border-radius: 2px;
+
+  @include mixin.transition;
+
+  &:has(~ .description:hover) {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.description {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  @include mixin.transition;
+
+  &:hover {
+    color: var(--eraser-color);
+    background-color: var(--bucket-color);
+  }
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.position {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
