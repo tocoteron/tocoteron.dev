@@ -10,13 +10,6 @@
   width: 2px;
   background-color: var(--pencil-color);
   border-radius: 2px;
-
-  @include mixin.transition;
-
-  &:has(~ .description:hover) {
-    visibility: hidden;
-    opacity: 0;
-  }
 }
 
 .description {
@@ -33,6 +26,11 @@
     color: var(--eraser-color);
     background-color: var(--bucket-color);
   }
+}
+
+.current .description {
+  color: var(--eraser-color);
+  background-color: var(--bucket-color);
 }
 
 .tags {

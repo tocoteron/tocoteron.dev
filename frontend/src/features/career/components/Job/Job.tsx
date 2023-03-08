@@ -1,18 +1,23 @@
+import clsx from 'clsx'
+
 import JobModel from '../../models/Job'
 
 import styles from './Job.module.scss'
 
 import Period from '@/components/Period'
 import Tag from '@/components/Tag'
+import TextCursor from '@/components/TextCursor'
 
 interface Props {
   job: JobModel
 }
 
 export default function Job({ job }: Props) {
+  const isCurrentJob = !('until' in job.period)
+
   return (
-    <div className={styles.job}>
-      <div className={styles.divider}></div>
+    <div className={clsx(styles.job, isCurrentJob && styles.current)}>
+      {!isCurrentJob && <div className={styles.divider} />}
       <div className={styles.description}>
         <div className={styles.tags}>
           <div className={styles.position}>
@@ -28,12 +33,17 @@ export default function Job({ job }: Props) {
           </ul>
         </div>
         <div>
-          Worked at <Period period={job.period} />
+          {isCurrentJob ? 'Working' : 'Worked at'}&nbsp;
+          <Period period={job.period} />
+          {isCurrentJob && !job.notes && <TextCursor />}
         </div>
         {job.notes && (
           <ul>
             {job.notes.map((note, i) => (
-              <li key={i}>{note.text}</li>
+              <li key={i}>
+                {note.text}
+                {isCurrentJob && i === job.notes!.length - 1 && <TextCursor />}
+              </li>
             ))}
           </ul>
         )}

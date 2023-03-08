@@ -1,3 +1,9 @@
+@use './keyframe.scss';
+
 @mixin transition {
   transition: all 400ms ease;
+}
+
+@mixin blink {
+  animation: blink 1.2s infinite;
 }
