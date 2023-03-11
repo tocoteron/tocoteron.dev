@@ -12,8 +12,12 @@ export default function CertificationList({
 }: CertificationListProps) {
   return (
     <ol className={styles.certifications}>
-      {certifications.map(certification => (
-        <Certification key={certification.name} certification={certification} />
+      {certifications.map((certification, i) => (
+        <Certification
+          key={certification.name}
+          certification={certification}
+          latest={i === 0}
+        />
       ))}
     </ol>
   )
