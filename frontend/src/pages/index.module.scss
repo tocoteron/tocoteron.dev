@@ -1,4 +1,4 @@
-.section {
+.section:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -6,4 +6,10 @@
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: normal;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
 }

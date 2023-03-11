@@ -1,0 +1,60 @@
+@use '@/styles/mixin.scss';
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 48px;
+  user-select: none;
+  border-right: 1px solid var(--weak-pencil-color);
+
+  img {
+    padding-top: 0.2rem;
+  }
+}
+
+.contacts {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contact {
+  padding: 0.2rem;
+  border-radius: 1rem;
+
+  @include mixin.transition;
+
+  &:hover {
+    background-color: var(--weak-pencil-color);
+  }
+}
+
+.description {
+  width: 100%;
+  padding: 1rem;
+  line-height: 1.5rem;
+  color: var(--eraser-color);
+  background-color: var(--bucket-color);
+
+  @media screen and (min-width: 768px) {
+    flex: 1;
+  }
+}
