@@ -1,3 +1,4 @@
+import Note from '@/models/Note'
 import { Period } from '@/models/Time'
 
 export default interface Job {
@@ -22,8 +23,3 @@ type Domain =
   | 'Android app'
   | 'IoT'
   | 'Blockchain'
-
-interface Note {
-  text: string
-  links?: string[]
-}

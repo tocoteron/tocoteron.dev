@@ -60,7 +60,7 @@ const career: Career = [
         },
         role: 'Software Engineer',
         domains: ['Web backend', 'Infrastructure', 'Blockchain'],
-        notes: [{ text: 'Hokusai', links: ['https://hokusai.app/'] }],
+        notes: [{ text: 'Hokusai', link: 'https://hokusai.app/' }],
       },
       {
         employmentStatus: 'Part-time',
@@ -83,7 +83,7 @@ const career: Career = [
           'Infrastructure',
           'Blockchain',
         ],
-        notes: [{ text: 'Hokusai', links: ['https://hokusai.app/'] }],
+        notes: [{ text: 'Hokusai', link: 'https://hokusai.app/' }],
       },
     ],
   },
@@ -138,7 +138,7 @@ const career: Career = [
         notes: [
           {
             text: 'MediaDo Tech Internship',
-            links: ['https://techdo.mediado.jp/entry/2020/12/01/090000'],
+            link: 'https://techdo.mediado.jp/entry/2020/12/01/090000',
           },
         ],
       },
@@ -169,7 +169,7 @@ const career: Career = [
         notes: [
           {
             text: 'Treasure',
-            links: ['https://techlog.voyagegroup.com/entry/2020/09/08/184336'],
+            link: 'https://techlog.voyagegroup.com/entry/2020/09/08/184336',
           },
         ],
       },
