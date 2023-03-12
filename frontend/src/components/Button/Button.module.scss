@@ -1,0 +1,49 @@
+@use '@/styles/mixin.scss';
+
+.button {
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+  color: var(--pencil-color);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+
+  &:hover {
+    color: var(--eraser-color);
+  }
+}
+
+.content {
+  position: relative;
+}
+
+.switch {
+  @include mixin.transition;
+
+  &:hover {
+    background-color: var(--bucket-color);
+  }
+}
+
+.forward {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: var(--bucket-color);
+    transform: translateX(calc(-100%));
+
+    @include mixin.transition;
+  }
+
+  &:hover {
+    &::before {
+      transform: translateX(0);
+    }
+  }
+}
