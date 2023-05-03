@@ -3,6 +3,26 @@ import { Career } from '@/features/career/models/Career'
 const career: Career = [
   {
     company: {
+      name: 'Knowledge Work',
+      link: 'https://kwork.studio/',
+    },
+    jobs: [
+      {
+        employmentStatus: 'Full-time',
+        period: {
+          since: {
+            year: 2023,
+            month: 5,
+            day: 1,
+          },
+        },
+        role: 'Software Engineer',
+        domains: ['Web backend', 'Infrastructure'],
+      },
+    ],
+  },
+  {
+    company: {
       name: 'BizReach',
       link: 'https://www.bizreach.co.jp/',
     },
@@ -14,6 +34,11 @@ const career: Career = [
             year: 2022,
             month: 4,
             day: 1,
+          },
+          until: {
+            year: 2023,
+            month: 4,
+            day: 30,
           },
         },
         role: 'Software Engineer',

@@ -3,6 +3,14 @@ import Certificaiton from '../models/Certification'
 const certifications: Certificaiton[] = [
   {
     date: {
+      year: 2023,
+      month: 4,
+      day: 7,
+    },
+    name: 'JSTQB Foundation Level',
+  },
+  {
+    date: {
       year: 2017,
       month: 12,
       day: 20,
